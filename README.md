@@ -7,6 +7,65 @@
 3. Fork 專案
 4. 建立 Pull Request
 
+## 這是哪一種 Git 流程？
+
+這次練習其實結合了兩種常見的 Git 協作流程：
+
+### 1. Feature Branch Workflow（功能分支流程）
+
+我先從 `main` 建立一個新的 `developGitBranch` 分支，在分支上修改檔案、Commit，再把分支推到 GitHub。
+
+流程大致是：
+
+```text
+main
+  ↓
+建立 developGitBranch
+  ↓
+修改檔案
+  ↓
+git add
+  ↓
+git commit
+  ↓
+git push
+  ↓
+合併回 main
+```
+
+這種做法的好處是：不直接在 `main` 上修改，可以把每個功能或作業放在獨立分支中，完成後再合併。
+
+這個流程和 **GitHub Flow** 的概念很接近。GitHub Flow 通常也是從 `main` 建立分支、修改、Commit、Push，接著透過 Pull Request 審查後再合併回 `main`。
+
+### 2. Forking Workflow（Fork 工作流程）
+
+Fork 則是另一種常見的 GitHub 協作方式。
+
+它通常用在「不是直接在原始 Repository 裡開分支」的情況，而是：
+
+```text
+原始 Repository
+        ↓
+       Fork
+        ↓
+自己的 Repository
+        ↓
+建立 / 修改分支
+        ↓
+Push
+        ↓
+Pull Request
+        ↓
+請求合併回原始 Repository
+```
+
+所以這次作業不是單一一種 Git 流程，而是同時練習：
+
+- **Feature Branch Workflow / GitHub Flow**：分支、Commit、Push、Merge
+- **Forking Workflow**：Fork、Pull Request
+
+---
+
 ---
 
 ## 1. 建立分支 Branch
